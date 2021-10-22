@@ -1,0 +1,72 @@
+{
+	// Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+
+	"Create Header for Python Script": {
+		"prefix": "NewFileHeader",
+		"body": [
+		  "##############################################################################",
+		  "# File: $TM_FILENAME",
+		  "# Description: ${1:Description}",
+		  "# Created: $CURRENT_MONTH-$CURRENT_DATE-$CURRENT_YEAR by Caleb Bennett",
+		  "# Updated: ",
+		  "##############################################################################"
+		],
+		"description": "Create Header for YGH Script"
+	  },
+	  "Create Note Outline": {
+		"prefix": "Note",
+		"body": [
+		  "# $TM_FILENAME_BASE",
+		  "",
+		  "## Description",
+		  "",
+		  "${1:Description}",
+		  "",
+		  "### Notes",
+		  "",
+		  "* $CURRENT_MONTH-$CURRENT_DATE-$CURRENT_YEAR",
+		  "  * ${2:Note}"
+		],
+		"description": "Create Note Outline"
+	  },
+	  "Insert Date": {
+		"prefix": "NoteDate",
+		"body": [
+		  "* $CURRENT_MONTH-$CURRENT_DATE-$CURRENT_YEAR",
+		  "  * "
+		],
+		"description": "Create Blank Note Subsection"
+	  },
+	  "Insert Date and Create from Clipboard": {
+		"prefix": "NoteDate",
+		"body": [
+		  "* $CURRENT_MONTH-$CURRENT_DATE-$CURRENT_YEAR",
+		  "${CLIPBOARD/(^.+)/  * $1/gm}",
+		],
+		"description": "Create Note Subsection from clipboard"
+	  },
+	  "Insert Date and Create Note from Selection": {
+		"prefix": "NoteDate",
+		"body": [
+		  "* $CURRENT_MONTH-$CURRENT_DATE-$CURRENT_YEAR",
+		  "${TM_SELECTED_TEXT/(^.+)/  * $1/gm}",
+		],
+		"description": "Create Note Subsection from Selection"
+	  }
+
+}
