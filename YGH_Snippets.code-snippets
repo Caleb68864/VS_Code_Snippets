@@ -28,6 +28,17 @@
 		],
 		"description": "Create Header for YGH Script"
 	  },
+	  "Create Oncall Note File": {
+		"prefix": "OnCall",
+		"body": [
+		  "# $TM_FILENAME_BASE",
+		  "",
+		  "* $CURRENT_MONTH-$CURRENT_DATE-$CURRENT_YEAR",
+		  "  * ${2:Note}",
+		  "",
+		],
+		"description": "Create Note Outline"
+	  },
 	  "Create Note Outline": {
 		"prefix": "Note",
 		"body": [
@@ -44,7 +55,14 @@
 		],
 		"description": "Create Note Outline"
 	  },
-	  "Insert Date": {
+	  "Insert Time": {
+		"prefix": "NoteTime",
+		"body": [
+		  "$CURRENT_HOUR:$CURRENT_MINUTE",
+		],
+		"description": "Create Blank Note Subsection"
+	  },
+	  "Insert Date Bullet Point": {
 		"prefix": "NoteDate",
 		"body": [
 		  "* $CURRENT_MONTH-$CURRENT_DATE-$CURRENT_YEAR",
