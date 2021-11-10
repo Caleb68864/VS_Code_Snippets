@@ -46,5 +46,18 @@
 		  "]"
 		],
 		"description": "Create Python Array from Clipboard"
+	  },
+	  "Read lines of a text file and Start Loop": {
+		"prefix": "ReadTxtFile",
+		"body": [
+		"# Using readlines()",
+		"file1 = open('${1:File}', 'r')",
+		"Lines = file1.readlines()",
+		"",
+		"# Strips the newline character",
+		"for line in Lines:",
+		"    ${2:Do Work}"
+		],
+		"description": "Read lines of a text file and Start Loop"
 	  }
 }

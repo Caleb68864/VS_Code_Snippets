@@ -56,9 +56,17 @@
 		"description": "Create Note Outline"
 	  },
 	  "Insert Time": {
-		"prefix": "NoteTime",
+		"prefix": "Time",
 		"body": [
 		  "$CURRENT_HOUR:$CURRENT_MINUTE",
+		],
+		"description": "Create Blank Note Subsection"
+	  },
+	  "Insert Date": {
+		"prefix": "Date",
+		"body": [
+		  "* $CURRENT_MONTH-$CURRENT_DATE-$CURRENT_YEAR",
+		  "  * "
 		],
 		"description": "Create Blank Note Subsection"
 	  },
