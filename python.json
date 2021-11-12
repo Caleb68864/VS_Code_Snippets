@@ -59,5 +59,23 @@
 		"    ${2:Do Work}"
 		],
 		"description": "Read lines of a text file and Start Loop"
+	  },
+	  "Write variable to a text file": {
+		"prefix": "WriteTxtFile",
+		"body": [
+		  "f = open(f'${1:FileName}.${2:Extension}', '${3|w,a|}')",
+		  "f.write('${4:Output}')",
+		  "f.close()"
+		],
+		"description": "Write variable to a text file"
+	  },
+	  "Write Array to a text file": {
+		"prefix": "WriteArray2TxtFile",
+		"body": [
+		  "f = open(f'${1:FileName}.${2:Extension}', '${3|w,a|}')",
+		  "f.writelines(${4:Array})",
+		  "f.close()"
+		],
+		"description": "Write Array to a text file"
 	  }
 }
