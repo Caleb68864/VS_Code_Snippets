@@ -43,10 +43,7 @@
 	  "Create Blank C# List": {
 		"prefix": "MakeList",
 		"body": [
-		  "${1|double,int,string|}[] ${2:array1} = {",
-		  "'${3:Item}',",
-		  "};",
-		  "List<$1> $2List = new List<$1>($2);"
+		  "List<${1|double,int,string|}> ${2:list1} = new List<$1>($2);"
 		],
 		"description": "Create C# Array from Selection"
 	  },
