@@ -18,7 +18,7 @@
 		"body": [
 		  "${1|double,int,string|}[] ${2:array1} = {",
 		  "'${3:Item}',",
-		  "}"
+		  "};"
 		],
 		"description": "Create C# Array from Selection"
 	  },
@@ -27,7 +27,7 @@
 		"body": [
 		  "${1|double,int,string|} ${2:array1} = {",
 		  "${TM_SELECTED_TEXT/(^.+)/'$1',/gm}",
-		  "}"
+		  "};"
 		],
 		"description": "Create C# Array from Selection"
 	  },
@@ -36,8 +36,28 @@
 		"body": [
 		  "${1|double,int,string|} ${2:array1} = {",
 		  "${CLIPBOARD/(^.+)/'$1',/gm}",
-		  "}"
+		  "};"
 		],
 		"description": "Create C# Array from Clipboard"
-	  }
+	  },
+	  "Create Blank C# List": {
+		"prefix": "MakeList",
+		"body": [
+		  "${1|double,int,string|}[] ${2:array1} = {",
+		  "'${3:Item}',",
+		  "};",
+		  "List<$1> $2List = new List<$1>($2);"
+		],
+		"description": "Create C# Array from Selection"
+	  },
+	  "Create C# List from Clipboard": {
+		"prefix": "MakeList",
+		"body": [
+		  "${1|double,int,string|} ${2:array1} = {",
+		  "${CLIPBOARD/(^.+)/'$1',/gm}",
+		  "};",
+		  "List<$1> $2List = new List<$1>($2);"
+		],
+		"description": "Create C# Array from Clipboard"
+	  },
 }
