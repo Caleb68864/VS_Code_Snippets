@@ -40,4 +40,13 @@
 		],
 		"description": "Create Powershell Array from Clipboard"
 	  },
+	  "Loop Through CSV File": {
+	  "prefix": "ForEachCSV",
+	"body": [
+		"Import-Csv '${1:csvfile}' | ForEach-Object {",
+		"    ${2:Do Stuff}",
+		"}"
+		],
+		"description": "Loop Through CSV File"
+	  }
 }
