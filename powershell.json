@@ -48,5 +48,14 @@
 		"}"
 		],
 		"description": "Loop Through CSV File"
+	  },
+	  "Loop Through Array": {
+		"prefix": "ForEachArray",
+		"body": [
+		  "Foreach (${1:element} in ${2:array1}) {",
+		  "    ${3:Do Stuff}",
+		  "}"
+		],
+		"description": "Loop Through Array"
 	  }
 }
