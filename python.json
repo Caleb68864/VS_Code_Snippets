@@ -78,15 +78,4 @@
 		],
 		"description": "Write Array to a text file"
 	  },
-	  "Import yghpython Package": {
-		"prefix": "yghpython",
-		"body": [
-		  "import sys",
-		  "# insert at 1, 0 is the script path (or '' in REPL)",
-		  "sys.path.insert(1, '//datanas-01/Share1/Users/is/Scripts/Python/yghpython')",
-		  "",
-		  "from ${1|ygh_ad,ygh_email,ygh_excel,ygh_file,ygh_powershell,ygh_sql,ygh_time,ygh_zip|} import *"
-		],
-		"description": "Import yghpython Package"
-	  }
 }
