@@ -14,7 +14,7 @@
 	// }
 
 	  "Create Blank Powershell Array": {
-		"prefix": "MakeArray",
+		"prefix": "MakeArrayBlank",
 		"body": [
 		  "${1:array1} = @(",
 		  "'${2:Item}',",
@@ -23,7 +23,7 @@
 		"description": "Create Powershell Array from Selection"
 	  },
 	  "Create Powershell Array from Selection": {
-		"prefix": "MakeArray",
+		"prefix": "MakeArraySelection",
 		"body": [
 		  "${1:array1} = @(",
 		  "${TM_SELECTED_TEXT/(^.+)/'$1',/gm}",
@@ -32,7 +32,7 @@
 		"description": "Create Powershell Array from Selection"
 	  },
 	  "Create Powershell Array from Clipboard": {
-		"prefix": "MakeArray",
+		"prefix": "MakeArrayClipboard",
 		"body": [
 		  "${1:array1} = @(",
 		  "${CLIPBOARD/(^.+)/'$1',/gm}",
