@@ -21,7 +21,7 @@
 		"description": "Create Imports for Pandas Project"
 	  },
 	  "Create Blank Python Array": {
-		"prefix": "MakeArray",
+		"prefix": "MakeArrayBlank",
 		"body": [
 		  "${1:array1} = [",
 		  "'${2:Item}',",
@@ -30,7 +30,7 @@
 		"description": "Create Python Array from Selection"
 	  },
 	  "Create Python Array from Selection": {
-		"prefix": "MakeArray",
+		"prefix": "MakeArraySelection",
 		"body": [
 		  "${1:array1} = [",
 		  "${TM_SELECTED_TEXT/(^.+)/'$1',/gm}",
@@ -39,7 +39,7 @@
 		"description": "Create Python Array from Selection"
 	  },
 	  "Create Python Array from Clipboard": {
-		"prefix": "MakeArray",
+		"prefix": "MakeArrayClipboard",
 		"body": [
 		  "${1:array1} = [",
 		  "${CLIPBOARD/(^.+)/'$1',/gm}",
@@ -77,5 +77,16 @@
 		  "f.close()"
 		],
 		"description": "Write Array to a text file"
+	  },
+	  "Import yghpython Package": {
+		"prefix": "yghpython",
+		"body": [
+		  "import sys",
+		  "# insert at 1, 0 is the script path (or '' in REPL)",
+		  "sys.path.insert(1, '//datanas-01/Share1/Users/is/Scripts/Python/yghpython')",
+		  "",
+		  "from ${1|ygh_ad,ygh_email,ygh_excel,ygh_file,ygh_powershell,ygh_sql,ygh_time,ygh_zip|} import *"
+		],
+		"description": "Import yghpython Package"
 	  }
 }
